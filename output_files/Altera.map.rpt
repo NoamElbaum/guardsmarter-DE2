@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Altera
-Wed Feb 19 15:51:32 2020
+Fri Apr 03 19:26:55 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -17,13 +17,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   9. Registers Removed During Synthesis
  10. Removed Registers Triggering Further Register Optimizations
  11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: VGA_SYNC:inst2|video_PLL:video_PLL_inst|altpll:altpll_component
- 15. Parameter Settings for User Entity Instance: myRam:inst4
- 16. altpll Parameter Settings by Entity Instance
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: VGA_SYNC:inst2|video_PLL:video_PLL_inst|altpll:altpll_component
+ 14. Parameter Settings for User Entity Instance: myRam:inst4
+ 15. altpll Parameter Settings by Entity Instance
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -49,16 +48,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 19 15:51:32 2020           ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 03 19:26:55 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Altera                                          ;
 ; Top-level Entity Name              ; ALL                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 161                                             ;
-;     Total combinational functions  ; 134                                             ;
-;     Dedicated logic registers      ; 96                                              ;
-; Total registers                    ; 96                                              ;
-; Total pins                         ; 21                                              ;
+; Total logic elements               ; 202                                             ;
+;     Total combinational functions  ; 150                                             ;
+;     Dedicated logic registers      ; 126                                             ;
+; Total registers                    ; 126                                             ;
+; Total pins                         ; 22                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -167,7 +166,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                        ; Library ;
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
-; clk_div.vhd                      ; yes             ; User VHDL File                     ; C:/Users/noam2/Desktop/guardsmarter-DE2/clk_div.vhd                 ;         ;
 ; myRAM.vhd                        ; yes             ; User VHDL File                     ; C:/Users/noam2/Desktop/guardsmarter-DE2/myRAM.vhd                   ;         ;
 ; RX.vhd                           ; yes             ; User VHDL File                     ; C:/Users/noam2/Desktop/guardsmarter-DE2/RX.vhd                      ;         ;
 ; TX.vhd                           ; yes             ; User VHDL File                     ; C:/Users/noam2/Desktop/guardsmarter-DE2/TX.vhd                      ;         ;
@@ -177,6 +175,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; vga_sync.vhd                     ; yes             ; User VHDL File                     ; C:/Users/noam2/Desktop/guardsmarter-DE2/vga_sync.vhd                ;         ;
 ; Writer.vhd                       ; yes             ; User VHDL File                     ; C:/Users/noam2/Desktop/guardsmarter-DE2/Writer.vhd                  ;         ;
 ; main.vhd                         ; yes             ; User VHDL File                     ; C:/Users/noam2/Desktop/guardsmarter-DE2/main.vhd                    ;         ;
+; keyboard.vhd                     ; yes             ; User VHDL File                     ; C:/Users/noam2/Desktop/guardsmarter-DE2/keyboard.vhd                ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf        ;         ;
 ; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc    ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
@@ -190,31 +189,31 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 161      ;
+; Estimated Total logic elements              ; 202      ;
 ;                                             ;          ;
-; Total combinational functions               ; 134      ;
+; Total combinational functions               ; 150      ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 72       ;
-;     -- 3 input functions                    ; 19       ;
-;     -- <=2 input functions                  ; 43       ;
+;     -- 4 input functions                    ; 78       ;
+;     -- 3 input functions                    ; 26       ;
+;     -- <=2 input functions                  ; 46       ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 104      ;
+;     -- normal mode                          ; 120      ;
 ;     -- arithmetic mode                      ; 30       ;
 ;                                             ;          ;
-; Total registers                             ; 96       ;
-;     -- Dedicated logic registers            ; 96       ;
+; Total registers                             ; 126      ;
+;     -- Dedicated logic registers            ; 126      ;
 ;     -- I/O registers                        ; 0        ;
 ;                                             ;          ;
-; I/O pins                                    ; 21       ;
+; I/O pins                                    ; 22       ;
 ; Embedded Multiplier 9-bit elements          ; 0        ;
 ; Total PLLs                                  ; 1        ;
 ;     -- PLLs                                 ; 1        ;
 ;                                             ;          ;
 ; Maximum fan-out node                        ; CLOCK_50 ;
-; Maximum fan-out                             ; 58       ;
-; Total fan-out                               ; 712      ;
-; Average fan-out                             ; 2.83     ;
+; Maximum fan-out                             ; 68       ;
+; Total fan-out                               ; 851      ;
+; Average fan-out                             ; 2.85     ;
 +---------------------------------------------+----------+
 
 
@@ -223,14 +222,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                  ; Library Name ;
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------+--------------+
-; |ALL                               ; 134 (0)           ; 96 (0)       ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |ALL                                                                 ; work         ;
+; |ALL                               ; 150 (0)           ; 126 (0)      ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |ALL                                                                 ; work         ;
 ;    |UART:inst|                     ; 63 (1)            ; 46 (9)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALL|UART:inst                                                       ; work         ;
 ;       |RX:C2|                      ; 62 (62)           ; 37 (37)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALL|UART:inst|RX:C2                                                 ; work         ;
-;    |VGA_SYNC:inst2|                ; 61 (61)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALL|VGA_SYNC:inst2                                                  ; work         ;
+;    |VGA_SYNC:inst2|                ; 60 (60)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALL|VGA_SYNC:inst2                                                  ; work         ;
 ;       |video_PLL:video_PLL_inst|   ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALL|VGA_SYNC:inst2|video_PLL:video_PLL_inst                         ; work         ;
 ;          |altpll:altpll_component| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALL|VGA_SYNC:inst2|video_PLL:video_PLL_inst|altpll:altpll_component ; work         ;
 ;    |Writer:inst3|                  ; 1 (1)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALL|Writer:inst3                                                    ; work         ;
-;    |main:inst5|                    ; 9 (9)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALL|main:inst5                                                      ; work         ;
+;    |keyboard:inst11|               ; 16 (16)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALL|keyboard:inst11                                                 ; work         ;
+;    |main:inst10|                   ; 10 (10)           ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALL|main:inst10                                                     ; work         ;
 ;    |myRam:inst4|                   ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALL|myRam:inst4                                                     ; work         ;
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -254,44 +254,48 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; UART:inst|TX_START                     ; Stuck at GND due to stuck port data_in      ;
 ; UART:inst|TX:C1|DATAFLL[0..9]          ; Stuck at GND due to stuck port clock_enable ;
 ; UART:inst|TX:C1|BUSY                   ; Lost fanout                                 ;
-; main:inst5|R_ADDRESS[0..2]             ; Stuck at GND due to stuck port data_in      ;
+; main:inst10|R_ADDRESS[0..2]            ; Stuck at GND due to stuck port data_in      ;
+; main:inst10|B                          ; Stuck at GND due to stuck port data_in      ;
 ; UART:inst|TX:C1|TX_FLG                 ; Stuck at GND due to stuck port data_in      ;
+; VGA_SYNC:inst2|blue_out                ; Stuck at GND due to stuck port data_in      ;
 ; UART:inst|TX:C1|INDEX[0..3]            ; Stuck at GND due to stuck port clock_enable ;
 ; UART:inst|TX:C1|TX_LINE                ; Stuck at GND due to stuck port clock_enable ;
 ; UART:inst|TX:C1|PRSCL[0..12]           ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 42 ;                                             ;
+; Total Number of Removed Registers = 44 ;                                             ;
 +----------------------------------------+---------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                             ;
-+----------------------+--------------------------------+---------------------------------------------------------------------------------+
-; Register name        ; Reason for Removal             ; Registers Removed due to This Register                                          ;
-+----------------------+--------------------------------+---------------------------------------------------------------------------------+
-; UART:inst|TX_START   ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[0], UART:inst|TX:C1|DATAFLL[9], UART:inst|TX:C1|TX_FLG, ;
-;                      ; due to stuck port data_in      ; UART:inst|TX:C1|INDEX[0], UART:inst|TX:C1|INDEX[1], UART:inst|TX:C1|INDEX[2],   ;
-;                      ;                                ; UART:inst|TX:C1|INDEX[3], UART:inst|TX:C1|TX_LINE, UART:inst|TX:C1|PRSCL[0],    ;
-;                      ;                                ; UART:inst|TX:C1|PRSCL[1], UART:inst|TX:C1|PRSCL[2], UART:inst|TX:C1|PRSCL[3],   ;
-;                      ;                                ; UART:inst|TX:C1|PRSCL[4], UART:inst|TX:C1|PRSCL[5], UART:inst|TX:C1|PRSCL[6],   ;
-;                      ;                                ; UART:inst|TX:C1|PRSCL[7], UART:inst|TX:C1|PRSCL[8], UART:inst|TX:C1|PRSCL[9],   ;
-;                      ;                                ; UART:inst|TX:C1|PRSCL[10], UART:inst|TX:C1|PRSCL[11], UART:inst|TX:C1|PRSCL[12] ;
-; UART:inst|TX_DATA[7] ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[8]                                                      ;
-;                      ; due to stuck port clock_enable ;                                                                                 ;
-; UART:inst|TX_DATA[6] ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[7]                                                      ;
-;                      ; due to stuck port clock_enable ;                                                                                 ;
-; UART:inst|TX_DATA[5] ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[6]                                                      ;
-;                      ; due to stuck port clock_enable ;                                                                                 ;
-; UART:inst|TX_DATA[4] ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[5]                                                      ;
-;                      ; due to stuck port clock_enable ;                                                                                 ;
-; UART:inst|TX_DATA[3] ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[4]                                                      ;
-;                      ; due to stuck port clock_enable ;                                                                                 ;
-; UART:inst|TX_DATA[2] ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[3]                                                      ;
-;                      ; due to stuck port clock_enable ;                                                                                 ;
-; UART:inst|TX_DATA[1] ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[2]                                                      ;
-;                      ; due to stuck port clock_enable ;                                                                                 ;
-; UART:inst|TX_DATA[0] ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[1]                                                      ;
-;                      ; due to stuck port clock_enable ;                                                                                 ;
-+----------------------+--------------------------------+---------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                 ;
++--------------------------+--------------------------------+---------------------------------------------------------------------------------+
+; Register name            ; Reason for Removal             ; Registers Removed due to This Register                                          ;
++--------------------------+--------------------------------+---------------------------------------------------------------------------------+
+; UART:inst|TX_START       ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[0], UART:inst|TX:C1|DATAFLL[9], UART:inst|TX:C1|TX_FLG, ;
+;                          ; due to stuck port data_in      ; UART:inst|TX:C1|INDEX[0], UART:inst|TX:C1|INDEX[1], UART:inst|TX:C1|INDEX[2],   ;
+;                          ;                                ; UART:inst|TX:C1|INDEX[3], UART:inst|TX:C1|TX_LINE, UART:inst|TX:C1|PRSCL[0],    ;
+;                          ;                                ; UART:inst|TX:C1|PRSCL[1], UART:inst|TX:C1|PRSCL[2], UART:inst|TX:C1|PRSCL[3],   ;
+;                          ;                                ; UART:inst|TX:C1|PRSCL[4], UART:inst|TX:C1|PRSCL[5], UART:inst|TX:C1|PRSCL[6],   ;
+;                          ;                                ; UART:inst|TX:C1|PRSCL[7], UART:inst|TX:C1|PRSCL[8], UART:inst|TX:C1|PRSCL[9],   ;
+;                          ;                                ; UART:inst|TX:C1|PRSCL[10], UART:inst|TX:C1|PRSCL[11], UART:inst|TX:C1|PRSCL[12] ;
+; main:inst10|R_ADDRESS[0] ; Stuck at GND                   ; main:inst10|B, VGA_SYNC:inst2|blue_out                                          ;
+;                          ; due to stuck port data_in      ;                                                                                 ;
+; UART:inst|TX_DATA[7]     ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[8]                                                      ;
+;                          ; due to stuck port clock_enable ;                                                                                 ;
+; UART:inst|TX_DATA[6]     ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[7]                                                      ;
+;                          ; due to stuck port clock_enable ;                                                                                 ;
+; UART:inst|TX_DATA[5]     ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[6]                                                      ;
+;                          ; due to stuck port clock_enable ;                                                                                 ;
+; UART:inst|TX_DATA[4]     ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[5]                                                      ;
+;                          ; due to stuck port clock_enable ;                                                                                 ;
+; UART:inst|TX_DATA[3]     ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[4]                                                      ;
+;                          ; due to stuck port clock_enable ;                                                                                 ;
+; UART:inst|TX_DATA[2]     ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[3]                                                      ;
+;                          ; due to stuck port clock_enable ;                                                                                 ;
+; UART:inst|TX_DATA[1]     ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[2]                                                      ;
+;                          ; due to stuck port clock_enable ;                                                                                 ;
+; UART:inst|TX_DATA[0]     ; Stuck at GND                   ; UART:inst|TX:C1|DATAFLL[1]                                                      ;
+;                          ; due to stuck port clock_enable ;                                                                                 ;
++--------------------------+--------------------------------+---------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -299,24 +303,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 96    ;
-; Number of registers using Synchronous Clear  ; 13    ;
+; Total registers                              ; 126   ;
+; Number of registers using Synchronous Clear  ; 14    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 22    ;
+; Number of registers using Asynchronous Clear ; 21    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 42    ;
+; Number of registers using Clock Enable       ; 72    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; main:inst5|B                           ; 2       ;
-; Total number of inverted registers = 1 ;         ;
-+----------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -324,9 +318,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |ALL|VGA_SYNC:inst2|v_count[6] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |ALL|main:inst5|R              ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |ALL|VGA_SYNC:inst2|v_count[8] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |ALL|main:inst10|R             ;
 ; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |ALL|UART:inst|RX:C2|PRSCL[0]  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |ALL|keyboard:inst11|INCNT[3]  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |ALL|UART:inst|RX:C2|RX_FLG    ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ALL|UART:inst|RX:C2|INDEX[0]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
@@ -748,7 +743,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Feb 19 15:51:27 2020
+    Info: Processing started: Fri Apr 03 19:26:51 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Altera -c Altera
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
@@ -780,6 +775,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file writer.
 Info (12021): Found 2 design units, including 1 entities, in source file main.vhd
     Info (12022): Found design unit 1: main-arch_main
     Info (12023): Found entity 1: main
+Info (12021): Found 2 design units, including 1 entities, in source file keyboard_control.vhd
+    Info (12022): Found design unit 1: KEYBOARD_CONTROL-arch_KEYBOARD_CONTROL
+    Info (12023): Found entity 1: KEYBOARD_CONTROL
+Info (12021): Found 2 design units, including 1 entities, in source file keyboard.vhd
+    Info (12022): Found design unit 1: keyboard-a
+    Info (12023): Found entity 1: keyboard
 Info (12127): Elaborating entity "ALL" for the top level hierarchy
 Info (12128): Elaborating entity "UART" for hierarchy "UART:inst"
 Info (12128): Elaborating entity "TX" for hierarchy "UART:inst|TX:C1"
@@ -818,27 +819,26 @@ Info (12133): Instantiated megafunction "VGA_SYNC:inst2|video_PLL:video_PLL_inst
     Info (12134): Parameter "operation_mode" = "NORMAL"
     Info (12134): Parameter "compensate_clock" = "CLK0"
     Info (12134): Parameter "clk0_phase_shift" = "0"
-Info (12128): Elaborating entity "main" for hierarchy "main:inst5"
+Info (12128): Elaborating entity "main" for hierarchy "main:inst10"
 Info (12128): Elaborating entity "myRam" for hierarchy "myRam:inst4"
-Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:inst1"
+Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:inst11"
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "myRam:inst4|Memory" is uninferred due to inappropriate RAM size
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "UART_TXD" is stuck at GND
+    Warning (13410): Pin "VGA_B[9]" is stuck at GND
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 185 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
+Info (21057): Implemented 227 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 163 logic cells
+    Info (21061): Implemented 204 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4654 megabytes
-    Info: Processing ended: Wed Feb 19 15:51:32 2020
-    Info: Elapsed time: 00:00:05
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4655 megabytes
+    Info: Processing ended: Fri Apr 03 19:26:55 2020
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

@@ -295,7 +295,7 @@ VCCIO4                       : C20       : power  :                   : 3.3V    
 GND*                         : C21       :        :                   :         : 4         :                
 GND*                         : C22       :        :                   :         : 4         :                
 GND*                         : C23       :        :                   :         : 4         :                
-GND*                         : C24       :        :                   :         : 5         :                
+ps2_dat                      : C24       : input  : 3.3-V LVTTL       :         : 5         : Y              
 UART_RXD                     : C25       : input  : 3.3-V LVTTL       :         : 5         : Y              
 VCCIO5                       : C26       : power  :                   : 3.3V    : 5         :                
 GND*                         : D1        :        :                   :         : 2         :                
@@ -323,7 +323,7 @@ VCCIO4                       : D22       : power  :                   : 3.3V    
 GND*                         : D23       :        :                   :         : 5         :                
 GND                          : D24       : gnd    :                   :         :           :                
 GND*                         : D25       :        :                   :         : 5         :                
-GND*                         : D26       :        :                   :         : 5         :                
+ps2_clk                      : D26       : input  : 3.3-V LVTTL       :         : 5         : Y              
 GND*                         : E1        :        :                   :         : 2         :                
 GND*                         : E2        :        :                   :         : 2         :                
 ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : E3        : input  : 3.3-V LVTTL       :         : 2         : N              
@@ -532,7 +532,7 @@ GND*                         : M23       :        :                   :         
 GND*                         : M24       :        :                   :         : 5         :                
 GND*                         : M25       :        :                   :         : 5         :                
 GND                          : M26       : gnd    :                   :         :           :                
-CLOCK_51                     : N1        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND+                         : N1        :        :                   :         : 2         :                
 CLOCK_50                     : N2        : input  : 3.3-V LVTTL       :         : 2         : Y              
 DATA0                        : N3        : input  :                   :         : 2         :                
 nCE                          : N4        :        :                   :         : 2         :                
