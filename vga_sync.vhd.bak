@@ -1,5 +1,6 @@
-library IEEE;
+ library IEEE;
 use  IEEE.STD_LOGIC_1164.all;
+use  IEEE.STD_LOGIC_ARITH.all;
 use  IEEE.STD_LOGIC_UNSIGNED.all;
 -- Module Generates Video Sync Signals for Video Montor Interface
 -- RGB and Sync outputs tie directly to monitor conector pins
