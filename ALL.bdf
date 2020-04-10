@@ -69,7 +69,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 80 72 128 88))
+	(annotation_block (location)(rect 184 128 232 144))
 )
 (pin
 	(input)
