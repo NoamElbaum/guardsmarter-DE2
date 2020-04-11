@@ -2,39 +2,39 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'keyboard:inst11|keyboard_clk_filtered'
-Slack : -1.552
-TNS   : -28.881
+Type  : Slow Model Setup 'keyboard:inst1|keyboard_clk_filtered'
+Slack : -1.464
+TNS   : -25.971
 
 Type  : Slow Model Setup 'CLOCK_50'
-Slack : -1.002
-TNS   : -8.079
+Slack : -1.414
+TNS   : -8.253
 
 Type  : Slow Model Setup 'UART:inst|RX:C2|BUSY'
-Slack : -0.971
-TNS   : -7.711
+Slack : -0.970
+TNS   : -7.503
 
-Type  : Slow Model Setup 'inst2|video_PLL_inst|altpll_component|pll|clk[0]'
-Slack : 13.226
+Type  : Slow Model Setup 'inst5|video_PLL_inst|altpll_component|pll|clk[0]'
+Slack : 13.369
 TNS   : 0.000
 
 Type  : Slow Model Hold 'CLOCK_50'
-Slack : -2.558
-TNS   : -5.107
+Slack : -2.549
+TNS   : -5.085
 
 Type  : Slow Model Hold 'UART:inst|RX:C2|BUSY'
 Slack : 0.391
 TNS   : 0.000
 
-Type  : Slow Model Hold 'inst2|video_PLL_inst|altpll_component|pll|clk[0]'
+Type  : Slow Model Hold 'inst5|video_PLL_inst|altpll_component|pll|clk[0]'
 Slack : 0.391
 TNS   : 0.000
 
-Type  : Slow Model Hold 'keyboard:inst11|keyboard_clk_filtered'
+Type  : Slow Model Hold 'keyboard:inst1|keyboard_clk_filtered'
 Slack : 0.391
 TNS   : 0.000
 
-Type  : Slow Model Minimum Pulse Width 'keyboard:inst11|keyboard_clk_filtered'
+Type  : Slow Model Minimum Pulse Width 'keyboard:inst1|keyboard_clk_filtered'
 Slack : -0.500
 TNS   : -22.000
 
@@ -46,43 +46,43 @@ Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
 Slack : 9.000
 TNS   : 0.000
 
-Type  : Slow Model Minimum Pulse Width 'inst2|video_PLL_inst|altpll_component|pll|clk[0]'
+Type  : Slow Model Minimum Pulse Width 'inst5|video_PLL_inst|altpll_component|pll|clk[0]'
 Slack : 19.000
 TNS   : 0.000
 
 Type  : Fast Model Setup 'UART:inst|RX:C2|BUSY'
-Slack : -0.262
-TNS   : -2.069
+Slack : -0.263
+TNS   : -1.976
 
-Type  : Fast Model Setup 'keyboard:inst11|keyboard_clk_filtered'
-Slack : -0.212
-TNS   : -3.154
+Type  : Fast Model Setup 'keyboard:inst1|keyboard_clk_filtered'
+Slack : -0.178
+TNS   : -2.925
 
 Type  : Fast Model Setup 'CLOCK_50'
-Slack : -0.048
-TNS   : -0.432
+Slack : -0.123
+TNS   : -0.306
 
-Type  : Fast Model Setup 'inst2|video_PLL_inst|altpll_component|pll|clk[0]'
-Slack : 16.336
+Type  : Fast Model Setup 'inst5|video_PLL_inst|altpll_component|pll|clk[0]'
+Slack : 16.314
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CLOCK_50'
-Slack : -1.599
-TNS   : -3.191
+Slack : -1.592
+TNS   : -3.172
 
 Type  : Fast Model Hold 'UART:inst|RX:C2|BUSY'
 Slack : 0.215
 TNS   : 0.000
 
-Type  : Fast Model Hold 'inst2|video_PLL_inst|altpll_component|pll|clk[0]'
+Type  : Fast Model Hold 'inst5|video_PLL_inst|altpll_component|pll|clk[0]'
 Slack : 0.215
 TNS   : 0.000
 
-Type  : Fast Model Hold 'keyboard:inst11|keyboard_clk_filtered'
+Type  : Fast Model Hold 'keyboard:inst1|keyboard_clk_filtered'
 Slack : 0.215
 TNS   : 0.000
 
-Type  : Fast Model Minimum Pulse Width 'keyboard:inst11|keyboard_clk_filtered'
+Type  : Fast Model Minimum Pulse Width 'keyboard:inst1|keyboard_clk_filtered'
 Slack : -0.500
 TNS   : -22.000
 
@@ -94,7 +94,7 @@ Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
 Slack : 9.000
 TNS   : 0.000
 
-Type  : Fast Model Minimum Pulse Width 'inst2|video_PLL_inst|altpll_component|pll|clk[0]'
+Type  : Fast Model Minimum Pulse Width 'inst5|video_PLL_inst|altpll_component|pll|clk[0]'
 Slack : 19.000
 TNS   : 0.000
 
