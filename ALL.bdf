@@ -73,7 +73,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 1000 368 1168 384)
+	(rect 1008 376 1176 392)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "ps2_clk" (rect 5 0 42 12)(font "Arial" ))
 	(pt 168 8)
@@ -86,11 +86,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 944 360 1000 376))
+	(annotation_block (location)(rect 952 368 1008 384))
 )
 (pin
 	(input)
-	(rect 1000 384 1168 400)
+	(rect 1008 392 1176 408)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "ps2_dat" (rect 5 0 43 12)(font "Arial" ))
 	(pt 168 8)
@@ -103,7 +103,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 944 376 1000 392))
+	(annotation_block (location)(rect 952 384 1008 400))
 )
 (pin
 	(output)
@@ -340,62 +340,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 592 512 864 656)
-	(text "myRam" (rect 5 0 45 12)(font "Arial" ))
-	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "DataIn[7..0]" (rect 0 0 59 12)(font "Arial" ))
-		(text "DataIn[7..0]" (rect 21 27 80 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "address_W[numofbytes-1..0]" (rect 0 0 145 12)(font "Arial" ))
-		(text "address_W[numofbytes-1..0]" (rect 21 43 166 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "address_R[numofbytes-1..0]" (rect 0 0 142 12)(font "Arial" ))
-		(text "address_R[numofbytes-1..0]" (rect 21 59 163 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "Clock" (rect 0 0 28 12)(font "Arial" ))
-		(text "Clock" (rect 21 75 49 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "W_R" (rect 0 0 24 12)(font "Arial" ))
-		(text "W_R" (rect 21 91 45 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 272 32)
-		(output)
-		(text "DataOut[7..0]" (rect 0 0 67 12)(font "Arial" ))
-		(text "DataOut[7..0]" (rect 195 27 262 39)(font "Arial" ))
-		(line (pt 272 32)(pt 256 32)(line_width 3))
-	)
-	(parameter
-		"NumOfBytes"
-		"8"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 256 128))
-	)
-	(annotation_block (parameter)(rect 864 480 1056 512))
-)
-(symbol
 	(rect 1224 128 1448 336)
 	(text "VGA_SYNC" (rect 5 0 65 12)(font "Arial" ))
 	(text "inst2" (rect 8 192 31 204)(font "Arial" ))
@@ -566,23 +510,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1120 488 1152 520)
-	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
-	(text "inst8" (rect 3 21 26 33)(font "Arial" )(invisible))
-	(port
-		(pt 16 0)
-		(output)
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(line (pt 16 8)(pt 16 0))
-	)
-	(drawing
-		(line (pt 8 8)(pt 16 16))
-		(line (pt 16 16)(pt 24 8))
-		(line (pt 8 8)(pt 24 8))
-	)
-)
-(symbol
 	(rect 1064 608 1312 752)
 	(text "main" (rect 5 0 28 12)(font "Arial" ))
 	(text "inst10" (rect 8 128 37 140)(font "Arial" ))
@@ -654,9 +581,65 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1224 352 1448 496)
+	(rect 592 512 888 656)
+	(text "myRam" (rect 5 0 45 12)(font "Arial" ))
+	(text "inst15" (rect 8 128 37 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "DataIn[7..0]" (rect 0 0 59 12)(font "Arial" ))
+		(text "DataIn[7..0]" (rect 21 27 80 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "address_W[numofaddressbits-1..0]" (rect 0 0 173 12)(font "Arial" ))
+		(text "address_W[numofaddressbits-1..0]" (rect 21 43 194 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "address_R[numofaddressbits-1..0]" (rect 0 0 171 12)(font "Arial" ))
+		(text "address_R[numofaddressbits-1..0]" (rect 21 59 192 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "Clock" (rect 0 0 28 12)(font "Arial" ))
+		(text "Clock" (rect 21 75 49 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "W_R" (rect 0 0 24 12)(font "Arial" ))
+		(text "W_R" (rect 21 91 45 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 296 32)
+		(output)
+		(text "DataOut[7..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "DataOut[7..0]" (rect 219 27 286 39)(font "Arial" ))
+		(line (pt 296 32)(pt 280 32)(line_width 3))
+	)
+	(parameter
+		"NumOfAddressBits"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 280 128))
+	)
+	(annotation_block (parameter)(rect 592 480 824 512))
+)
+(symbol
+	(rect 1224 352 1448 464)
 	(text "keyboard" (rect 5 0 51 12)(font "Arial" ))
-	(text "inst11" (rect 8 128 37 140)(font "Arial" ))
+	(text "inst1" (rect 8 96 31 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -686,28 +669,14 @@ applicable agreement for further details.
 		(line (pt 0 80)(pt 16 80))
 	)
 	(port
-		(pt 0 96)
-		(input)
-		(text "read" (rect 0 0 21 12)(font "Arial" ))
-		(text "read" (rect 21 91 42 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
 		(pt 224 32)
 		(output)
 		(text "scan_code[7..0]" (rect 0 0 79 12)(font "Arial" ))
 		(text "scan_code[7..0]" (rect 137 27 216 39)(font "Arial" ))
 		(line (pt 224 32)(pt 208 32)(line_width 3))
 	)
-	(port
-		(pt 224 48)
-		(output)
-		(text "scan_ready" (rect 0 0 57 12)(font "Arial" ))
-		(text "scan_ready" (rect 155 43 212 55)(font "Arial" ))
-		(line (pt 224 48)(pt 208 48))
-	)
 	(drawing
-		(rectangle (rect 16 16 208 128))
+		(rectangle (rect 16 16 208 96))
 	)
 )
 (connector
@@ -728,11 +697,6 @@ applicable agreement for further details.
 (connector
 	(pt 944 720)
 	(pt 480 720)
-	(bus)
-)
-(connector
-	(pt 944 720)
-	(pt 944 400)
 	(bus)
 )
 (connector
@@ -815,11 +779,6 @@ applicable agreement for further details.
 	(pt 864 264)
 )
 (connector
-	(pt 808 400)
-	(pt 944 400)
-	(bus)
-)
-(connector
 	(text "clk50" (rect 554 72 579 84)(font "Arial" ))
 	(pt 584 88)
 	(pt 544 88)
@@ -839,11 +798,6 @@ applicable agreement for further details.
 )
 (connector
 	(pt 808 384)
-	(pt 816 384)
-	(bus)
-)
-(connector
-	(pt 816 456)
 	(pt 816 384)
 	(bus)
 )
@@ -972,16 +926,6 @@ applicable agreement for further details.
 	(pt 1328 688)
 )
 (connector
-	(pt 864 544)
-	(pt 968 544)
-	(bus)
-)
-(connector
-	(pt 968 544)
-	(pt 1008 544)
-	(bus)
-)
-(connector
 	(pt 568 608)
 	(pt 568 664)
 )
@@ -1033,38 +977,6 @@ applicable agreement for further details.
 	(pt 1200 208)
 )
 (connector
-	(pt 1224 448)
-	(pt 1136 448)
-)
-(connector
-	(pt 1136 448)
-	(pt 1136 488)
-)
-(connector
-	(pt 1176 384)
-	(pt 1176 376)
-)
-(connector
-	(pt 1168 376)
-	(pt 1176 376)
-)
-(connector
-	(pt 1224 384)
-	(pt 1176 384)
-)
-(connector
-	(pt 1184 400)
-	(pt 1184 392)
-)
-(connector
-	(pt 1168 392)
-	(pt 1184 392)
-)
-(connector
-	(pt 1224 400)
-	(pt 1184 400)
-)
-(connector
 	(text "rst" (rect 1154 424 1166 436)(font "Arial" ))
 	(pt 1224 432)
 	(pt 1176 432)
@@ -1114,6 +1026,50 @@ applicable agreement for further details.
 	(pt 1424 80)
 	(pt 1384 80)
 )
+(connector
+	(pt 888 544)
+	(pt 968 544)
+	(bus)
+)
+(connector
+	(pt 968 544)
+	(pt 1008 544)
+	(bus)
+)
+(connector
+	(pt 816 384)
+	(pt 816 400)
+	(bus)
+)
+(connector
+	(pt 1176 384)
+	(pt 1224 384)
+)
+(connector
+	(pt 1176 400)
+	(pt 1224 400)
+)
+(connector
+	(pt 944 720)
+	(pt 944 400)
+	(bus)
+)
+(connector
+	(pt 816 400)
+	(pt 816 456)
+	(bus)
+)
+(connector
+	(pt 808 400)
+	(pt 816 400)
+	(bus)
+)
+(connector
+	(pt 816 400)
+	(pt 944 400)
+	(bus)
+)
 (junction (pt 864 136))
-(junction (pt 968 544))
 (junction (pt 568 664))
+(junction (pt 968 544))
+(junction (pt 816 400))
