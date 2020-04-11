@@ -5,23 +5,22 @@ use ieee.std_logic_unsigned.all;
 entity main is
 port( 
 		-----------GENERAL I/O-------------
-		clk, rst,RAM_BUSY		 :in std_logic;
+		clk, rst		:in std_logic;
 		-------------RAM I/O---------------
-		RAM_IN					 :in std_logic_vector(7 downto 0);
-		R_ADDRESS				 :out std_logic_vector(7 downto 0);
+		RAM_IN		:in std_logic_vector(7 downto 0);
+		R_ADDRESS	:out std_logic_vector(7 downto 0);
 		-------------VGA I/O---------------
-		R,G,B						 :out std_logic;
+		R,G,B			:out std_logic;
 		------------keyboard I/O-----------
-		scan_code				 :in std_logic_vector(7 downto 0));
+		scan_code	:in std_logic_vector(7 downto 0));
 		
 end entity;
 
 
 architecture arch_main of main is
-
-	signal R_addr       :std_logic_vector(7 downto 0) := "00000000";		--address for reading from the RAM.
-
 begin
+	
+	R_ADDRESS <= "00000000";
 	
 	process(clk, rst)
 	begin
@@ -35,17 +34,14 @@ begin
 				G <= '1';
 				B <= '0';
 			else
-				if RAM_BUSY <= '0' then
-					R_ADDRESS <= "00000000";
-					if RAM_IN = "01100011" then
-						R <= '1';
-						G <= '0';
-						B <= '0';
-					elsif RAM_IN = "01101111" then
-						R <= '0';
-						G <= '1';
-						B <= '0';
-					end if;
+				if RAM_IN = "01100011" then
+					R <= '1';
+					G <= '0';
+					B <= '0';
+				elsif RAM_IN = "01101111" then
+					R <= '0';
+					G <= '1';
+					B <= '0';
 				end if;	
 			end if;
 		end if;

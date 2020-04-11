@@ -46,8 +46,8 @@ begin
 						else
 							DATA<=(OTHERS=>'0');
 						end if;
-					RX_FLG<='0';
-					BUSY<='0';
+						RX_FLG<='0';
+						BUSY<='0';
 					end if;
 				end if;
 			end if;

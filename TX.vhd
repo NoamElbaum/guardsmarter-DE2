@@ -17,6 +17,7 @@ signal PRSCL: integer range 0 to 5802:=0;
 signal INDEX: integer range 0 to 9:=0;
 signal DATAFLL: STD_LOGIC_VECTOR(9 downto 0);
 signal TX_FLG: STD_LOGIC:='0';
+
 BEGIN
 	process(CLK)
 		begin

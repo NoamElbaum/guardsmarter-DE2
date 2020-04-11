@@ -3,12 +3,10 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
 entity UART is
-port( CLOCK_50,RST   			: in std_logic;
-		DATA_IN						: in STD_LOGIC_VECTOR(7 downto 0);
-		send							: in STD_LOGIC;
-		DATA_OUT						: out STD_LOGIC_VECTOR(7 downto 0);
-		UART_TXD,READ_FLAG 		: out std_logic;
-		UART_RXD 					: in std_logic);
+port( CLOCK_50, RST ,send , UART_RXD  : in std_logic;
+		DATA_IN								  : in STD_LOGIC_VECTOR(7 downto 0);
+		DATA_OUT								  : out STD_LOGIC_VECTOR(7 downto 0);
+		UART_TXD,READ_FLAG 				  : out std_logic);
 		
 END UART;
 

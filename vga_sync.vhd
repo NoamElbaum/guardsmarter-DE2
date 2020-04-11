@@ -5,10 +5,10 @@ use  IEEE.STD_LOGIC_UNSIGNED.all;
 -- RGB and Sync outputs tie directly to monitor conector pins
 ENTITY VGA_SYNC IS
 	PORT(	clock_50Mhz, red, green, blue		: IN	STD_LOGIC;
-			red_out, green_out, blue_out, horiz_sync_out, 
-			vert_sync_out, video_on, pixel_clock	: OUT	STD_LOGIC;
+			red_out, green_out, blue_out, horiz_sync_out,vert_sync_out, video_on, pixel_clock	: OUT	STD_LOGIC;
 			pixel_row, pixel_column: OUT STD_LOGIC_VECTOR(9 DOWNTO 0));
 END VGA_SYNC;
+
 ARCHITECTURE a OF VGA_SYNC IS
 	SIGNAL horiz_sync, vert_sync, pixel_clock_int : STD_LOGIC;
 	SIGNAL video_on_int, video_on_v, video_on_h : STD_LOGIC;
