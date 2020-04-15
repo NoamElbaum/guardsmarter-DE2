@@ -37,42 +37,36 @@ LIBRARY altera_mf;
 USE altera_mf.altera_mf_components.all;
 
 ENTITY video_PLL IS
-	PORT
-	(
-		inclk0		: IN STD_LOGIC  := '0';
-		c0		: OUT STD_LOGIC 
-	);
+	PORT(inclk0		: IN STD_LOGIC  := '0';
+		  c0		   : OUT STD_LOGIC );
 END video_PLL;
 
 
 ARCHITECTURE SYN OF video_pll IS
 
-	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (5 DOWNTO 0);
-	SIGNAL sub_wire1	: STD_LOGIC ;
-	SIGNAL sub_wire2	: STD_LOGIC ;
-	SIGNAL sub_wire3	: STD_LOGIC_VECTOR (1 DOWNTO 0);
+	SIGNAL sub_wire0		: STD_LOGIC_VECTOR (5 DOWNTO 0);
+	SIGNAL sub_wire1		: STD_LOGIC ;
+	SIGNAL sub_wire2		: STD_LOGIC ;
+	SIGNAL sub_wire3		: STD_LOGIC_VECTOR (1 DOWNTO 0);
 	SIGNAL sub_wire4_bv	: BIT_VECTOR (0 DOWNTO 0);
-	SIGNAL sub_wire4	: STD_LOGIC_VECTOR (0 DOWNTO 0);
+	SIGNAL sub_wire4	   : STD_LOGIC_VECTOR (0 DOWNTO 0);
 
 
 
 	COMPONENT altpll
-	GENERIC (
-		clk0_duty_cycle		: NATURAL;
-		lpm_type		: STRING;
-		clk0_multiply_by		: NATURAL;
-		inclk0_input_frequency		: NATURAL;
-		clk0_divide_by		: NATURAL;
-		pll_type		: STRING;
-		intended_device_family		: STRING;
-		operation_mode		: STRING;
-		compensate_clock		: STRING;
-		clk0_phase_shift		: STRING
-	);
-	PORT (
-			inclk	: IN STD_LOGIC_VECTOR (1 DOWNTO 0);
-			clk	: OUT STD_LOGIC_VECTOR (5 DOWNTO 0)
-	);
+	GENERIC (clk0_duty_cycle		  : NATURAL;
+				lpm_type		           : STRING;
+				clk0_multiply_by		  : NATURAL;
+				inclk0_input_frequency : NATURAL;
+				clk0_divide_by		     : NATURAL;
+				pll_type		           : STRING;
+				intended_device_family : STRING;
+				operation_mode		     : STRING;
+				compensate_clock		  : STRING;
+				clk0_phase_shift		  : STRING);
+		
+	PORT (inclk	: IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+			clk	: OUT STD_LOGIC_VECTOR (5 DOWNTO 0));
 	END COMPONENT;
 
 BEGIN
@@ -96,13 +90,7 @@ BEGIN
 		compensate_clock => "CLK0",
 		clk0_phase_shift => "0"
 	)
-	PORT MAP (
-		inclk => sub_wire3,
-		clk => sub_wire0
-	);
-
-
-
+	PORT MAP (inclk => sub_wire3,clk => sub_wire0);
 END SYN;
 
 -- ============================================================
