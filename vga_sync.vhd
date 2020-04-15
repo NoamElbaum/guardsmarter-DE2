@@ -4,15 +4,16 @@ use  IEEE.STD_LOGIC_UNSIGNED.all;
 -- Module Generates Video Sync Signals for Video Montor Interface
 -- RGB and Sync outputs tie directly to monitor conector pins
 ENTITY VGA_SYNC IS
-	PORT(	clock_50Mhz, red, green, blue		: IN	STD_LOGIC;
-			red_out, green_out, blue_out, horiz_sync_out,vert_sync_out, video_on, pixel_clock	: OUT	STD_LOGIC;
-			pixel_row, pixel_column: OUT STD_LOGIC_VECTOR(9 DOWNTO 0));
+	PORT(	clock_50Mhz, red, green, blue						: IN	STD_LOGIC;
+			red_out, green_out, blue_out, horiz_sync_out : OUT	STD_LOGIC;
+			vert_sync_out, video_on, pixel_clock	      : OUT	STD_LOGIC;
+			pixel_row, pixel_column								: OUT STD_LOGIC_VECTOR(9 DOWNTO 0));
 END VGA_SYNC;
 
 ARCHITECTURE a OF VGA_SYNC IS
 	SIGNAL horiz_sync, vert_sync, pixel_clock_int : STD_LOGIC;
-	SIGNAL video_on_int, video_on_v, video_on_h : STD_LOGIC;
-	SIGNAL h_count, v_count :STD_LOGIC_VECTOR(9 DOWNTO 0);
+	SIGNAL video_on_int, video_on_v, video_on_h   : STD_LOGIC;
+	SIGNAL h_count, v_count                       : STD_LOGIC_VECTOR(9 DOWNTO 0);
 --
 -- To select a different screen resolution, clock rate, and refresh rate
 -- pick a set of new video timing constant values from table at end of code section
@@ -29,22 +30,17 @@ ARCHITECTURE a OF VGA_SYNC IS
 	CONSTANT V_sync_low: 		Natural := 491;
 	CONSTANT V_sync_high: 		Natural := 493;
 	CONSTANT V_end_count: 		Natural := 525;
+	
 	COMPONENT video_PLL
-	PORT
-	(
-		inclk0		: IN STD_LOGIC  := '0';
-		c0			: OUT STD_LOGIC 
-	);
-end component;
+	PORT(inclk0		: IN STD_LOGIC  := '0';
+		c0			   : OUT STD_LOGIC);
+	end component;
 
 BEGIN
 
 -- PLL below is used to generate the pixel clock frequency
 -- Uses UP 3's 48Mhz USB clock for PLL's input clock
-video_PLL_inst : video_PLL PORT MAP (
-		inclk0	 => Clock_50Mhz,
-		c0	 => pixel_clock_int
-	);
+video_PLL_inst : video_PLL PORT MAP (inclk0	 => Clock_50Mhz, c0	 => pixel_clock_int);
 
 -- video_on is high only when RGB pixel data is being displayed
 -- used to blank color signals at screen edges during retrace
